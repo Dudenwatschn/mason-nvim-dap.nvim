@@ -1,4 +1,6 @@
+local mason_path = require('mason-core.path')
+
 return {
 	type = 'executable',
-	command = vim.fn.exepath('node-debug2-adapter'),
+	command = mason_path.bin_prefix('node-debug2-adapter'),
 }

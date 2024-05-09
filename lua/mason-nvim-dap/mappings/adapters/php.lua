@@ -1,4 +1,6 @@
+local mason_path = require('mason-core.path')
+
 return {
 	type = 'executable',
-	command = vim.fn.exepath('php-debug-adapter'),
+	command = mason_path.bin_prefix('php-debug-adapter'),
 }

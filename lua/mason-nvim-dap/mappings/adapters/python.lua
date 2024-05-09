@@ -1,4 +1,5 @@
+local mason_path = require('mason-core.path')
 return {
 	type = 'executable',
-	command = vim.fn.exepath('debugpy-adapter'),
+	command = mason_path.bin_prefix('debugpy-adapter'),
 }

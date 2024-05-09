@@ -1,8 +1,9 @@
+local mason_path = require('mason-core.path')
 local M = {
 	type = 'server',
 	port = '${port}',
 	executable = {
-		command = vim.fn.exepath('codelldb'),
+		command = mason_path.bin_prefix('codelldb'),
 		args = { '--port', '${port}' },
 	},
 }
